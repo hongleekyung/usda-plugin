@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: USDA Food Nutrition API
+  description: Returns top 10 nutrients for a given food query.
+  version: "1.0.0"
+
+servers:
+  - url: https://df2f-175-116-221-182.ngrok-free.app
+
+paths:
+  /nutrients:
+    get:
+      operationId: getNutrients
+      summary: Get nutrient info for a food
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful nutrient data response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  food:
+                    type: string
+                  nutrients:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        value:
+                          type: number
+                        unit:
+                          type: string

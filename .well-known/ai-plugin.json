@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "USDA Nutrition GPT",
+  "name_for_model": "usda_nutrition",
+  "description_for_human": "Get real-time nutrition info from USDA.",
+  "description_for_model": "Fetches nutrition facts for any food from USDA API.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://df2f-175-116-221-182.ngrok-free.app/openapi.yaml"
+  },
+  "logo_url": "https://df2f-175-116-221-182.ngrok-free.app/logo.png",
+  "contact_email": "your@email.com",
+  "legal_info_url": "https://df2f-175-116-221-182.ngrok-free.app/legal"
+}
